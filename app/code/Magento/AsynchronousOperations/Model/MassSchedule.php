@@ -89,7 +89,7 @@ class MassSchedule
         LoggerInterface $logger,
         OperationRepository $operationRepository,
         UserContextInterface $userContext = null,
-        Encryptor $encryptor
+        Encryptor $encryptor = null
     ) {
         $this->identityService = $identityService;
         $this->itemStatusInterfaceFactory = $itemStatusInterfaceFactory;
@@ -98,7 +98,7 @@ class MassSchedule
         $this->logger = $logger;
         $this->operationRepository = $operationRepository;
         $this->userContext = $userContext ?: ObjectManager::getInstance()->get(UserContextInterface::class);
-        $this->encryptor = $encryptor;
+        $this->encryptor = $encryptor ?: ObjectManager::getInstance()->getEncryptor::class();
     }
 
     /**
