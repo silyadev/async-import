@@ -21,7 +21,6 @@ use Psr\Log\LoggerInterface;
 use Magento\AsynchronousOperations\Model\ResourceModel\Operation\OperationRepository;
 use Magento\Authorization\Model\UserContextInterface;
 use Magento\Framework\Encryption\Encryptor;
-use function Sodium\crypto_pwhash_scryptsalsa208sha256;
 
 /**
  * Class MassSchedule used for adding multiple entities as Operations to Bulk Management with the status tracking
