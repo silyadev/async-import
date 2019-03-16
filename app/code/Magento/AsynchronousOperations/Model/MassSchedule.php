@@ -98,7 +98,7 @@ class MassSchedule
         $this->logger = $logger;
         $this->operationRepository = $operationRepository;
         $this->userContext = $userContext ?: ObjectManager::getInstance()->get(UserContextInterface::class);
-        $this->encryptor = $encryptor ?: ObjectManager::getInstance()->getEncryptor::class();
+        $this->encryptor = $encryptor ?: ObjectManager::getInstance()->get(Encryptor::class);
     }
 
     /**
